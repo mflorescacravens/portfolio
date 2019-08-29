@@ -1,3 +1,8 @@
+img, svg {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 .App {
   text-align: center;
 }
@@ -16,11 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  /* color: white; */
 }
 
 .App-link {
-  color: #61dafb;
+  color: blue;
 }
 
 @keyframes App-logo-spin {
