@@ -12,7 +12,7 @@ img {
 ul {
   list-style-type: none;
   display: flex;
-  border: 1px solid black;
+  border: 3px solid white;
   padding-inline-start: 0px;
   justify-content: space-evenly;
   padding-top: 25px;
@@ -21,7 +21,7 @@ ul {
 
 li {
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 li:hover {
@@ -52,6 +52,20 @@ li:hover {
   padding: 10px;
   background-color: white;
   margin: 5px;
+}
+
+.icons:hover {
+  animation: App-logo-spin infinite 5s linear;
+}
+
+.projectsList {
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.project {
+  margin: 5px;
+  border: 3px solid white;
 }
 
 @keyframes App-logo-spin {

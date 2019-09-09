@@ -42,6 +42,23 @@ function App() {
         <img className="icons" src={Postgres} alt="Postgres"/>
         <img className="icons" src={Django} alt="Django"/>
       </div>
+      <h2>Projects</h2>
+      <h3>TODO: add pictures/gifs of projects, add nice CSS design</h3>
+      <div className="projectsList">
+        <div className="project">
+          <h3>Title: "War!"</h3>
+          <img src="" alt=""/>
+        </div>
+        <div className="project">
+          <h3>Title: "Runtime Terror - Drink Dictionary"</h3>
+          <img src="" alt=""/>
+        </div>
+        <div className="project">
+          <h3>Title: </h3>
+          <img src="" alt=""/>
+        </div>
+      </div>
+
 
     </div>
   );
