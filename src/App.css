@@ -1,6 +1,10 @@
 body {
-  padding: 20px;
-  background-color: lightblue;
+  background-color: darkgray;
+  background-image: url(./skyscraper.jpg);
+  color: white;
+  background-size: auto;
+  background-position: fixed;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -12,7 +16,7 @@ img {
 ul {
   list-style-type: none;
   display: flex;
-  border: 3px solid white;
+  border: 4px solid white;
   padding-inline-start: 0px;
   justify-content: space-evenly;
   padding-top: 25px;
@@ -21,11 +25,16 @@ ul {
 
 li {
   padding: 10px;
-  border: 1px solid white;
+  border: 2px solid white;
+  background: rgba(0,0,0,.5)
 }
 
 li:hover {
-  background-color: green;
+  background-color: rgba(0, 120, 0, 0.8);
+}
+
+.root {
+  margin: 0px;
 }
 
 .App {
@@ -37,15 +46,39 @@ li:hover {
   height: 250px;
   border-radius: 50%;
   border: 1px solid black;
+  box-shadow: 10px 10px rgba(0,0,0,.4);
+  margin: 90px auto;
+
+}
+
+.self:hover {
+  animation: Raise 1 .1s forwards;
+}
+
+.Hello {
+  font-size: 20px;
+}
+
+.shortBio {
+  margin: 50px auto;
+  background: rgba(0,0,0,.5);
+  border: 2px solid white;
+  margin: 30px auto;
+  width: 500px;
+  margin-top: 100px;
+  padding: 20px;
 }
 
 .iconsList {
-  max-width: 80%;
+  max-width: 40%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 0 auto;
-  
+  margin: 100px auto;
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(0,0,0,.5);
+  border: 2px solid white;
 }
 
 .icons {
@@ -54,18 +87,26 @@ li:hover {
   margin: 5px;
 }
 
-.icons:hover {
-  animation: App-logo-spin infinite 5s linear;
-}
-
 .projectsList {
   border: 1px solid white;
   padding: 5px;
 }
 
 .project {
-  margin: 5px;
+  margin: 15px auto;
   border: 3px solid white;
+  width: 70%;
+  height: 20em;
+}
+
+.trans {
+  background-color: white;
+  color: white;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  margin-top: 200px;
+
 }
 
 @keyframes App-logo-spin {
@@ -74,5 +115,14 @@ li:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes Raise {
+  from {
+    transform: translateX(0px) translateY(0px);
+  }
+  to {
+    transform: translateX(-3px) translateY(-5px);
   }
 }

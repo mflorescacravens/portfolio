@@ -20,16 +20,20 @@ function App() {
       <nav>
         <ul>
           <li>About</li>
-          <li>Projects</li>
           <li>Skills</li>
+          <li>Projects</li>
         </ul>
       </nav>
-      <h2>Hello, my name is Miguel!</h2>
-      <h3>I am a full stack developer transitioning from the 
-        finance world. I have learned many valuable skills that
-         I look forward to transitioning in to software development!
-      </h3>
-      <h2>Skills</h2>
+      <table className='trans'>yo</table>
+      <div className="shortBio">
+        <h2 className="Hello">Hello, my name is Miguel!</h2>
+        <h3>I am a full stack developer with background in finance.I have learned many valuable skills that
+          I look forward to transitioning in to software development!
+        </h3>
+      </div>
+      <br/>
+      <br/>
+      <h1>Skills</h1>
       <div className="iconsList">
         <img className="icons" src={ReactImg} alt="React"/>
         <img className="icons" src={MongoDB} alt="MongoDB"/>
