@@ -33,6 +33,10 @@ li:hover {
   background-color: rgba(0, 120, 0, 0.8);
 }
 
+a {
+  color: rgba(0, 120, 0, 0.8);
+}
+
 .root {
   margin: 0px;
 }
@@ -92,11 +96,21 @@ li:hover {
   padding: 5px;
 }
 
+.about {
+  margin-top: 100px;
+}
+
 .project {
   margin: 15px auto;
   border: 3px solid white;
   width: 70%;
   height: 20em;
+  padding: 40px;
+}
+
+.projectPic {
+  width: 30%;
+  height: 50%;
 }
 
 .trans {

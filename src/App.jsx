@@ -10,7 +10,9 @@ import Postgres from './LogosPNG/postgres.png';
 import ReactImg from './LogosPNG/react.png';
 import Sequelize from './LogosPNG/sequelize.png';
 import TS from './LogosPNG/ts.png';
-import Miguel from './LogosPNG/Miguel_self.jpg'
+import Miguel from './LogosPNG/Miguel_self.jpg';
+import Runtime from './Runtime.png';
+import TheHacks from './TheHacks.png';
 
 
 function App() {
@@ -20,14 +22,16 @@ function App() {
       <nav>
         <ul>
           <li>About</li>
+          <li>Contact</li>
           <li>Skills</li>
           <li>Projects</li>
         </ul>
       </nav>
-      <table className='trans'>yo</table>
+      <table className='trans'></table>
+      <h1 className="about">About Me</h1>
       <div className="shortBio">
         <h2 className="Hello">Hello, my name is Miguel!</h2>
-        <h3>I am a full stack developer with background in finance.I have learned many valuable skills that
+        <h3>I am a full stack developer with background in finance. I have learned many valuable skills that
           I look forward to transitioning in to software development!
         </h3>
       </div>
@@ -51,15 +55,17 @@ function App() {
       <div className="projectsList">
         <div className="project">
           <h3>Title: "War!"</h3>
-          <img src="" alt=""/>
+          <img className="projectPic" src="" alt=""/>
         </div>
         <div className="project">
           <h3>Title: "Runtime Terror - Drink Dictionary"</h3>
-          <img src="" alt=""/>
+          <img className="projectPic" src={TheHacks} alt=""/>
+          <p>Info: A drink information website that stores your favorite cocktails. Click here to see the site: <a href="https://desolate-coast-19668.herokuapp.com">Runtime-Terror</a> or on Github <a href="https://github.com/Guelito1/project2">here</a></p>
         </div>
         <div className="project">
-          <h3>Title: </h3>
-          <img src="" alt=""/>
+          <h3>Title: "The Hacks"</h3>
+          <img className="projectPic" src={Runtime} alt="The Hacks"/>
+          <p>Info: A collaborative social site where users can categorize Hacker News stories in a free form format. Click here to see the site: <a href=""></a></p>
         </div>
       </div>
 
