@@ -13,6 +13,7 @@ import TS from './LogosPNG/ts.png';
 import Miguel from './LogosPNG/Miguel_self.jpg';
 import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
+import Mars from './Mars.png';
 
 
 function App() {
@@ -62,21 +63,21 @@ function App() {
         <img className="icons" src={Django} alt="Django"/>
       </div>
       <h2>Projects</h2>
-      <h3>TODO: add pictures/gifs of projects, add nice CSS design</h3>
       <div className="projectsList">
         <div className="project">
-          <h3>Title: "War!"</h3>
-          <img className="projectPic" src="" alt=""/>
+            <h3>Title: "Runtime Terror - Drink Dictionary"</h3>
+            <img className="projectPic" src={Runtime} alt=""/>
+            <p>Info: A drink information website that stores your favorite cocktails. Click here to see the site: <a href="https://desolate-coast-19668.herokuapp.com">Runtime-Terror on Heroku</a> or on Github <a href="https://github.com/Guelito1/project2">here</a></p>
         </div>
         <div className="project">
-          <h3>Title: "Runtime Terror - Drink Dictionary"</h3>
-          <img className="projectPic" src={Runtime} alt=""/>
-          <p>Info: A drink information website that stores your favorite cocktails. Click here to see the site: <a href="https://desolate-coast-19668.herokuapp.com">Runtime-Terror</a> or on Github <a href="https://github.com/Guelito1/project2">here</a></p>
+          <h3>Title: "Mars"</h3>
+          <img className="projectPic" src={Mars} alt="Mars Project"/>
+          <p>Info: A site built to allow comments by users to interact with Mars rovers using NASA's Mars Rover API.</p>
         </div>
         <div className="project">
           <h3>Title: "The Hacks"</h3>
           <img className="projectPic" src={TheHacks} alt="The Hacks"/>
-          <p>Info: A collaborative social site where users can categorize Hacker News stories in a free form format. Click here to see the site: <a href=""></a></p>
+          <p>Info: A collaborative social site where users can categorize Hacker News stories in a free form format. Click here to see the site: <a href="https://github.com/Guelito1/project2">Github repo</a></p>
         </div>
       </div>
 
