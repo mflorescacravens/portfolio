@@ -14,6 +14,7 @@ import Miguel from './LogosPNG/Miguel_self.jpg';
 import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
 import Mars from './Mars.png';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
 function App() {
@@ -22,15 +23,15 @@ function App() {
       <img src={Miguel} alt="Miguel Floresca-Cravens" className="self"/>
       <nav>
         <ul>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Skills</li>
-          <li>Projects</li>
+          <AnchorLink className='list' href="#About">About Me</AnchorLink>
+          <AnchorLink className='list' href="#Contact">Contact</AnchorLink>
+          <AnchorLink className='list' href="#Skills">Skills</AnchorLink>
+          <AnchorLink className='list' href="#Projects">Projects</AnchorLink>
         </ul>
       </nav>
       <table className='trans'></table>
       <section className="sectionArea">
-        <h1 className="about">About Me</h1>
+        <h1 className="about" id="About">About Me</h1>
         <div className="shortBio">
           <h2 className="Hello">Hello, my name is Miguel!</h2>
           <h3>I am a full stack developer with background in finance. I have learned many valuable skills that
@@ -40,20 +41,20 @@ function App() {
       </section>
       <br/>
       <br/>
-      <section className="sectionArea">
+      <section className="sectionArea"  id="Contact">
         <h1>Contact</h1>
         <div className="contact">
           <div className="Github">
             <a href="https://github.com/Guelito1">Miguel on Github</a>
-            <img src="" alt=""/>
+            <img href="https://github.com/Guelito1" src="" alt=""/>
           </div>
           <div className="LinkedIn">
             <a href="https://www.linkedin.com/in/miguelfloresca-cravens/">Miguel on LinkedIn</a>
-            <img src="" alt=""/>
+            <img href="https://www.linkedin.com/in/miguelfloresca-cravens/" src="" alt=""/>
           </div>
         </div>
       </section>
-      <section className="sectionArea">
+      <section className="sectionArea" id="Skills">
       <h1>Skills</h1>
         <div className="iconsList">
           <img className="icons" src={ReactImg} alt="React"/>
@@ -68,7 +69,7 @@ function App() {
           <img className="icons" src={Django} alt="Django"/>
         </div>
       </section>
-      <section className="sectionArea">
+      <section className="sectionArea" id="Projects">
         <h2>Projects</h2>
         <div className="projectsList">
           <div className="project">
