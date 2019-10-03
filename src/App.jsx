@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import Django from './LogosPNG/Django-logo2.png';
-import MongoDB from './LogosPNG/MongoDB3.png';
-import CSS from './LogosPNG/css3.png';
-import HTML from './LogosPNG/html5.png';
-import JS from './LogosPNG/javascript.png';
-import NodeJS from './LogosPNG/nodejs.png';
-import Postgres from './LogosPNG/postgres.png';
-import ReactImg from './LogosPNG/react.png';
-import Sequelize from './LogosPNG/sequelize.png';
-import TS from './LogosPNG/ts.png';
-import Miguel from './LogosPNG/Miguel_self.jpg';
-import Runtime from './Runtime.png';
+import Miguel from './Logos/Miguel_self.jpg';
+import Django from './Logos/django-logo-positive.svg';
+import MongoDB from './Logos/mongodb.svg';
+import CSS from './Logos/css3-brands.svg';
+import HTML from './Logos/code-solid1.svg';
+import JS from './Logos/js-square-brands1.svg';
+// import NodeJS from './LogosPNG/nodejs.png';
+// import Postgres from './LogosPNG/postgres.png';
+// import ReactImg from './LogosPNG/react.png';
+// import Sequelize from './LogosPNG/sequelize.png';
+// import TS from './LogosPNG/ts.png';
+// import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
 import Mars from './Mars.png';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -32,6 +32,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import ListSubheader from '@material-ui/core/ListSubheader';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -143,16 +144,6 @@ export default function App() {
                   }}
                 />
               </GridListTile>
-              <GridListTile key={React}>
-                <img src={ReactImg} alt={'React'} />
-                <GridListTileBar
-                  title={'React'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
               <GridListTile key={MongoDB}>
                 <img src={MongoDB} alt={'MongoDB'} />
                 <GridListTileBar
@@ -173,6 +164,16 @@ export default function App() {
                   }}
                 />
               </GridListTile>
+              <GridListTile key={HTML}>
+                <img src={HTML} alt={'HTML'} />
+                <GridListTileBar
+                  title={'HTML'}
+                  classes={{
+                    root: classes.titleBar,
+                    title: classes.title,
+                  }}
+                />
+              </GridListTile>
               <GridListTile key={JS}>
                 <img src={JS} alt={'JS'} />
                 <GridListTileBar
@@ -183,7 +184,7 @@ export default function App() {
                   }}
                 />
               </GridListTile>
-              <GridListTile key={Postgres}>
+              {/* <GridListTile key={Postgres}>
                 <img src={Postgres} alt={'Postgres'} />
                 <GridListTileBar
                   title={'Postgres'}
@@ -232,25 +233,29 @@ export default function App() {
                     title: classes.title,
                   }}
                 />
-              </GridListTile>
+              </GridListTile> */}
           </GridList>
         </div>
 
-        {/* ADD THIS BACK FOR PROJECTS<GridList cellHeight={180} className={classes.gridList}>
-          <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-            <ListSubheader component="div">Miguel's Skills</ListSubheader>
-          </GridListTile>
-            <GridListTile key={Django}>
-              <img src={Django} alt={Django} />
-              <GridListTileBar
-                title={'Django'}
-                actionIcon={
-                  <IconButton aria-label={`info about Django`} className={classes.icon}>
-                  </IconButton>
-                }
-              />
+        {/* <div className={classes.root}>
+          <GridList cellHeight={180} className={classes.gridList}>
+            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+              <ListSubheader component="div">Miguel's Projects</ListSubheader>
             </GridListTile>
-        </GridList> */}
+              <GridListTile>
+                <img src={Runtime} alt={'Runtime'} />
+                <GridListTileBar
+                  title={'Runtime'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                    <IconButton className={classes.icon}>
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </div> */}
 
 
 
