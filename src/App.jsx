@@ -86,38 +86,43 @@ export default function App() {
   
   return (
     <div className={classes.root}>
-      <Grid container>
-        <AppBar item xs={12} position="fixed">
-          <Toolbar>
-            <IconButton 
-                edge="start" 
-                className={classes.menuButton} 
-                color="inherit" 
-                aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Miguel Floresca-Cravens
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        <Container>
-          <img className="self" item style={{height: 250}} xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-          <Typography>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects!</Typography>
+      <AppBar item xs={12} position="fixed">
+        <Toolbar>
+          <IconButton 
+              edge="start" 
+              className={classes.menuButton} 
+              color="inherit" 
+              aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            Miguel Floresca-Cravens
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Grid 
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center">
+        <Container position='relative'>
+          <img className="self" item style={{height: 250}} xs={8} src={Miguel} alt="Miguel Floresca-Cravens"/>
         </Container>
+        <Typography>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects!</Typography>
         <Grid container className={classes.root} spacing={1}>
-          <Grid item xs={12} s={6} m={4} l={4} xl={4}>
+          <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
             <Button href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                 Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid item xs={12} s={6} m={4} l={4} xl={4}>
+          <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
             <Button onClick={openModal} xs={5} variant="contained" color='primary'>
               Contact Miguel via Phone
               <CallIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid item xs={12} s={6} m={4} l={4} xl={4}>
+          <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
             <Button 
               item 
               href="https://www.linkedin.com/in/miguelfloresca-cravens/" 
@@ -129,7 +134,8 @@ export default function App() {
             </Button>
           </Grid>
           <div className={classes.root}>
-            <GridList className={classes.gridList} cols={2.5}>
+            <Typography variant='h3'>Skills</Typography>
+            <GridList className={classes.gridList} cols={2}>
               <GridListTile key={'React'}>
                 <img src={ReactImg} alt={'ReactImg'} />
                 <GridListTileBar
