@@ -100,29 +100,27 @@ export default function App() {
           </Typography>
         </Toolbar>
       </AppBar>
+      <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
       <Grid 
         container
-        spacing={0}
+        spacing={-5}
         direction="column"
         alignItems="center"
         justify="center">
-        <Container position='relative'>
-          <img className="self" item style={{height: 250}} xs={8} src={Miguel} alt="Miguel Floresca-Cravens"/>
-        </Container>
-        <Typography>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects!</Typography>
+        <Typography spacing={5}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects!</Typography>
         <Grid container className={classes.root} spacing={1}>
-          <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
+          <Grid item xs={12}>
             <Button href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                 Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
+          <Grid item xs={12}>
             <Button onClick={openModal} xs={5} variant="contained" color='primary'>
               Contact Miguel via Phone
               <CallIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid item xs={10} sm={6} md={4} lg={4} xl={4}>
+          <Grid item xs={12}>
             <Button 
               item 
               href="https://www.linkedin.com/in/miguelfloresca-cravens/" 
