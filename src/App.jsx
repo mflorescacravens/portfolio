@@ -37,7 +37,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    justifyContent: 'center',
+    margin: theme.spacing(8),
+    justify: 'center',    
   },
   paper: {
     padding: theme.spacing(2),
@@ -64,6 +65,8 @@ const useStyles = makeStyles(theme => ({
     transform: 'translateZ(0)',
     width: 400,
     height: 450,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   title: {
     color: theme.palette.primary,
@@ -101,26 +104,23 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
+      <Typography padding={12}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects for your team!</Typography>
       <Grid 
         container
         spacing={-5}
-        direction="column"
-        alignItems="center"
-        justify="center">
-        <Typography spacing={5}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects!</Typography>
-        <Grid container className={classes.root} spacing={1}>
-          <Grid item xs={12}>
+        justify='center'>
+          <Grid container justify='center' xs={12}>
             <Button href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                 Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid item xs={12}>
+          <Grid container justify='center' xs={12}>
             <Button onClick={openModal} xs={5} variant="contained" color='primary'>
               Contact Miguel via Phone
               <CallIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid item xs={12}>
+          <Grid container justify='center' xs={12}>
             <Button 
               item 
               href="https://www.linkedin.com/in/miguelfloresca-cravens/" 
@@ -132,7 +132,7 @@ export default function App() {
             </Button>
           </Grid>
           <div className={classes.root}>
-            <Typography variant='h3'>Skills</Typography>
+            <Typography justify='center' variant='h3'>Skills</Typography>
             <GridList className={classes.gridList} cols={2}>
               <GridListTile key={'React'}>
                 <img src={ReactImg} alt={'ReactImg'} />
@@ -145,7 +145,7 @@ export default function App() {
                 />
               </GridListTile>
               <GridListTile key={Django}>
-                <img src={Django} alt={'Django'} />
+                <img src={Django} alt={'Django'} className='imgFix' />
                 <GridListTileBar
                   title={'Django'}
                   classes={{
@@ -155,7 +155,7 @@ export default function App() {
                 />
               </GridListTile>
               <GridListTile key={MongoDB}>
-                <img src={MongoDB} alt={'MongoDB'} />
+                <img src={MongoDB} alt={'MongoDB'} className='imgFix' />
                 <GridListTileBar
                   title={'MongoDB'}
                   classes={{
@@ -205,7 +205,7 @@ export default function App() {
                 />
               </GridListTile>
               <GridListTile key={NodeJS}>
-                <img src={NodeJS} alt={'NodeJS'} />
+                <img src={NodeJS} alt={'NodeJS'} className='imgFix' />
                 <GridListTileBar
                   title={'NodeJS'}
                   classes={{
@@ -236,59 +236,59 @@ export default function App() {
               </GridListTile>
             </GridList>
           </div>
-
-          {/* <div className={classes.root}>
-            <GridList cellHeight={180} className={classes.gridList}>
-              <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                <ListSubheader component="div">Miguel's Projects</ListSubheader>
-              </GridListTile>
-                <GridListTile>
-                  <img src={} alt={'Runtime'} />
-                  <GridListTileBar
-                    title={'Runtime'}
-                    subtitle={<span>by: Miguel</span>}
-                    actionIcon={
-                      <IconButton className={classes.icon}>
-                      </IconButton>
-                    }
-                  />
-                </GridListTile>
-              ))}
-            </GridList>
-          </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-          <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            className={classes.modal}
-            open={modal}
-            onClose={closeModal}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-              timeout: 500,
-            }}
-          >
-            <Fade in={modal}>
-              <div className={classes.paper}>
-                <h2 id="transition-modal-title">Miguel's Phone Number</h2>
-                <Typography id="transition-modal-description">(206) 941-1312</Typography>
-              </div>
-            </Fade>
-          </Modal>
         </Grid>
-      </Grid>
+      
+        {/* <div className={classes.root}>
+          <GridList cellHeight={180} className={classes.gridList}>
+            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+              <ListSubheader component="div">Miguel's Projects</ListSubheader>
+            </GridListTile>
+              <GridListTile>
+                <img src={} alt={'Runtime'} />
+                <GridListTileBar
+                  title={'Runtime'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                    <IconButton className={classes.icon}>
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classes.modal}
+          open={modal}
+          onClose={closeModal}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={modal}>
+            <div className={classes.paper}>
+              <h2 id="transition-modal-title">Miguel's Phone Number</h2>
+              <Typography id="transition-modal-description">(206) 941-1312</Typography>
+            </div>
+          </Fade>
+        </Modal>
+        
     </div>
   );
 }
