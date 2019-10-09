@@ -70,6 +70,8 @@ const useStyles = makeStyles(theme => ({
     height: 450,
     justifyContent: 'center',
     alignItems: 'center',
+    margin: 23,
+
   },
   title: {
     color: theme.palette.primary,
@@ -99,7 +101,6 @@ export default function App() {
               className={classes.menuButton} 
               color="inherit" 
               aria-label="menu">
-            <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
             Miguel Floresca-Cravens
@@ -107,7 +108,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-      <Typography align='center' paragraph={true} variant='body1' padding={12}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects for your team!</Typography>
+      <Typography align='center' paragraph={true} variant='body1' padding={12}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun person with skills in full stack development. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for your team!</Typography>
       <Grid 
         container
         spacing={-5}
@@ -125,7 +126,8 @@ export default function App() {
           </Grid>
           <Grid container justify='center' xs={12}>
             <Button 
-              item 
+              item
+              className={classes.button} 
               href="https://www.linkedin.com/in/miguelfloresca-cravens/" 
               target="_blank"
               variant="contained" 
@@ -135,109 +137,113 @@ export default function App() {
             </Button>
           </Grid>
           <div className={classes.root}>
-            <Typography justify='center' spacing={5} variant='h3'>Skills</Typography>
-            <GridList className={classes.gridList} cols={2}>
-              <GridListTile key={'React'}>
-                <img src={ReactImg} alt={'ReactImg'} />
-                <GridListTileBar
-                  title={'React'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={Django}>
-                <img src={Django} alt={'Django'} className='imgFix' />
-                <GridListTileBar
-                  title={'Django'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={MongoDB}>
-                <img src={MongoDB} alt={'MongoDB'} className='imgFix' />
-                <GridListTileBar
-                  title={'MongoDB'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={CSS}>
-                <img src={CSS} alt={'CSS'} />
-                <GridListTileBar
-                  title={'CSS'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={HTML}>
-                <img src={HTML} alt={'HTML'} />
-                <GridListTileBar
-                  title={'HTML'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={JS}>
-                <img src={JS} alt={'JS'} />
-                <GridListTileBar
-                  title={'JS'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={Postgres}>
-                <img src={Postgres} alt={'Postgres'} />
-                <GridListTileBar
-                  title={'Postgres'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={NodeJS}>
-                <img src={NodeJS} alt={'NodeJS'} className='imgFix' />
-                <GridListTileBar
-                  title={'NodeJS'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={HTML}>
-                <img src={HTML} alt={'HTML'} />
-                <GridListTileBar
-                  title={'HTML'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-              <GridListTile key={TS}>
-                <img src={TS} alt={'TS'} />
-                <GridListTileBar
-                  title={'TS'}
-                  classes={{
-                    root: classes.titleBar,
-                    title: classes.title,
-                  }}
-                />
-              </GridListTile>
-            </GridList>
+            <Typography align='center' spacing={5} variant='h3'>Skills</Typography>
+            <Grid container alignItems='center' alignContent='center' justify='center'>
+              <Grid item alignContent='center' xs={12}>
+                <GridList className={classes.gridList}  cols={2}>
+                  <GridListTile key={'React'}>
+                    <img src={ReactImg} alt={'ReactImg'} />
+                    <GridListTileBar
+                      title={'React'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={Django}>
+                    <img src={Django} alt={'Django'} className='imgFix' />
+                    <GridListTileBar
+                      title={'Django'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={MongoDB}>
+                    <img src={MongoDB} alt={'MongoDB'} className='imgFix' />
+                    <GridListTileBar
+                      title={'MongoDB'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={CSS}>
+                    <img src={CSS} alt={'CSS'} />
+                    <GridListTileBar
+                      title={'CSS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={HTML}>
+                    <img src={HTML} alt={'HTML'} />
+                    <GridListTileBar
+                      title={'HTML'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={JS}>
+                    <img src={JS} alt={'JS'} />
+                    <GridListTileBar
+                      title={'JS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={Postgres}>
+                    <img src={Postgres} alt={'Postgres'} />
+                    <GridListTileBar
+                      title={'Postgres'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={NodeJS}>
+                    <img src={NodeJS} alt={'NodeJS'} className='imgFix' />
+                    <GridListTileBar
+                      title={'NodeJS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={HTML}>
+                    <img src={HTML} alt={'HTML'} />
+                    <GridListTileBar
+                      title={'HTML'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={TS}>
+                    <img src={TS} alt={'TS'} />
+                    <GridListTileBar
+                      title={'TS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                </GridList>
+              </Grid>
+            </Grid>
           </div>
         </Grid>
       
