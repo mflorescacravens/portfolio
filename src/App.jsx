@@ -40,6 +40,9 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(8),
     justify: 'center',    
   },
+  button: {
+    margin: theme.spacing(1),
+  },
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -104,18 +107,18 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-      <Typography padding={12}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects for your team!</Typography>
+      <Typography align='center' paragraph={true} variant='body1' padding={12}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun full stack developer with a background in finance. I have a passion for music and solving problems. I look forward to using my skills in future projects for your team!</Typography>
       <Grid 
         container
         spacing={-5}
         justify='center'>
           <Grid container justify='center' xs={12}>
-            <Button href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
+            <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                 Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
           <Grid container justify='center' xs={12}>
-            <Button onClick={openModal} xs={5} variant="contained" color='primary'>
+            <Button className={classes.button} onClick={openModal} xs={5} variant="contained" color='primary'>
               Contact Miguel via Phone
               <CallIcon className={classes.rightIcon}/>
             </Button>
@@ -132,7 +135,7 @@ export default function App() {
             </Button>
           </Grid>
           <div className={classes.root}>
-            <Typography justify='center' variant='h3'>Skills</Typography>
+            <Typography justify='center' spacing={5} variant='h3'>Skills</Typography>
             <GridList className={classes.gridList} cols={2}>
               <GridListTile key={'React'}>
                 <img src={ReactImg} alt={'ReactImg'} />
