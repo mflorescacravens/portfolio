@@ -31,6 +31,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import CodeIcon from '@material-ui/icons/Code';
 import Container from '@material-ui/core/Container'
 
 const useStyles = makeStyles(theme => ({
@@ -119,7 +120,7 @@ export default function App() {
             </Button>
           </Grid>
           <Grid container justify='center' xs={12}>
-            <Button className={classes.button} onClick={openModal} xs={5} variant="contained" color='primary'>
+            <Button className={classes.button} onClick={openModal} variant="contained" color='primary'>
               Contact Miguel via Phone
               <CallIcon className={classes.rightIcon}/>
             </Button>
@@ -128,7 +129,7 @@ export default function App() {
             <Button 
               item
               className={classes.button} 
-              href="https://www.linkedin.com/in/miguelfloresca-cravens/" 
+              href="https://www.linkedin.com/in/miguelfloresca-cravens/"
               target="_blank"
               variant="contained" 
               color='primary'>
@@ -136,11 +137,28 @@ export default function App() {
               <LinkedInIcon className={classes.rightIcon} />
             </Button>
           </Grid>
+          <Grid container justify='center' xs={12}>
+            <Button 
+              variant='contained' 
+              color='primary' 
+              href="https://github.com/Guelito1">
+                Contact Miguel via Github
+              <CodeIcon className={classes.rightIcon} />
+            </Button>
+          </Grid>
           <div className={classes.root}>
-            <Typography align='center' spacing={5} variant='h3'>Skills</Typography>
-            <Grid container alignItems='center' alignContent='center' justify='center'>
-              <Grid item alignContent='center' xs={12}>
-                <GridList className={classes.gridList}  cols={2}>
+            <Typography align='center' variant='h3'>Skills</Typography>
+            <Grid 
+              container 
+              alignItems='center' 
+              alignContent='center' 
+              justify='center'>
+              <Grid
+                container
+                justify="center"
+                alignItems="center" 
+                xs={12}>
+                <GridList className={classes.gridList}   cols={2}>
                   <GridListTile key={'React'}>
                     <img src={ReactImg} alt={'ReactImg'} />
                     <GridListTileBar
