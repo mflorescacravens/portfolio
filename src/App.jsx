@@ -13,7 +13,6 @@ import TS from './Logos/TypeScript.svg';
 import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
 import Mars from './Mars.png';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -23,7 +22,6 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import { makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
 import SendIcon from '@material-ui/icons/Send';
 import CallIcon from '@material-ui/icons/Call';
@@ -32,7 +30,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import CodeIcon from '@material-ui/icons/Code';
-import Container from '@material-ui/core/Container'
+import ListSubheader from '@material-ui/core/ListSubheader';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -265,15 +263,34 @@ export default function App() {
           </div>
         </Grid>
       
-        {/* <div className={classes.root}>
-          <GridList cellHeight={180} className={classes.gridList}>
-            <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-              <ListSubheader component="div">Miguel's Projects</ListSubheader>
-            </GridListTile>
+        <div className={classes.root}>
+          <Grid justify={'center'} container={true}>
+            <GridList cellHeight={180} className={classes.gridList}>
+              <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+                <ListSubheader component="div">Miguel's Projects</ListSubheader>
+              </GridListTile>
               <GridListTile>
-                <img src={} alt={'Runtime'} />
+                <img src={Runtime} alt={'Runtime: Cocktail Aid'} />
                 <GridListTileBar
-                  title={'Runtime'}
+                  title={'Runtime: Cocktail Aid'}
+                  subtitle={<span>by: Miguel and team</span>}
+                  actionIcon={
+                    <IconButton className={classes.icon}>
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+              <GridListTile>
+                <img src={TheHacks} alt={'The Hacks'} />
+                <GridListTileBar
+                  title={'The Hacks'}
+                  subtitle={<span>by: Miguel</span>}
+                />
+              </GridListTile>
+              <GridListTile>
+                <img src={Mars} alt={'Mars'} />
+                <GridListTileBar
+                  title={'Mars'}
                   subtitle={<span>by: Miguel</span>}
                   actionIcon={
                     <IconButton className={classes.icon}>
@@ -281,9 +298,9 @@ export default function App() {
                   }
                 />
               </GridListTile>
-            ))}
-          </GridList>
-        </div> */}
+            </GridList>
+          </Grid>
+        </div>
 
 
 
