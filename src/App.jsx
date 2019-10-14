@@ -29,21 +29,20 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import CodeIcon from '@material-ui/icons/Code';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
-    margin: theme.spacing(8),
+    margin: theme.spacing(6),
     justify: 'center',    
   },
   button: {
     margin: theme.spacing(1),
   },
   paper: {
-    padding: theme.spacing(2),
     textAlign: 'center',
     color: theme.palette.text.secondary,
     backgroundColor: theme.palette.background.paper,
@@ -65,11 +64,18 @@ const useStyles = makeStyles(theme => ({
   gridList: {
     flexWrap: 'wrap',
     transform: 'translateZ(0)',
-    width: 400,
-    height: 450,
+    width: 'cover',
+    height: '250',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: 23,
+    margin: 0,
+  },
+  gridList2: {
+    flexWrap: 'wrap',
+    width: 'auto',
+    height: 'cover',
+    justifyContent: 'center',
+    alignItems: 'center',
 
   },
   title: {
@@ -141,7 +147,7 @@ export default function App() {
               color='primary' 
               href="https://github.com/Guelito1">
                 Contact Miguel via Github
-              <CodeIcon className={classes.rightIcon} />
+              <GitHubIcon className={classes.rightIcon} />
             </Button>
           </Grid>
           <div className={classes.root}>
@@ -248,7 +254,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={TS}>
-                    <img src={TS} alt={'TS'} />
+                    <img src={TS} alt={'TS'} className='imgFix' />
                     <GridListTileBar
                       title={'TS'}
                       classes={{
@@ -265,7 +271,7 @@ export default function App() {
       
         <div className={classes.root}>
           <Grid justify={'center'} container={true}>
-            <GridList cellHeight={180} className={classes.gridList}>
+            <GridList cellHeight={'auto'} className={classes.gridList2}>
               <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
                 <ListSubheader component="div">Miguel's Projects</ListSubheader>
               </GridListTile>
@@ -281,7 +287,7 @@ export default function App() {
                 />
               </GridListTile>
               <GridListTile>
-                <img src={TheHacks} alt={'The Hacks'} />
+                <img src={TheHacks} alt={'The Hacks'}  />
                 <GridListTileBar
                   title={'The Hacks'}
                   subtitle={<span>by: Miguel</span>}
