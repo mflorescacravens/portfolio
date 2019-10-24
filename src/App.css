@@ -8,4 +8,16 @@
 }
 .imgFix {
   max-width: 100%;
+  max-height: 100%;
+  object-fit: scale-down;
 }
+svg {
+  display: inline;
+}
+
+.imgGridFix {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+

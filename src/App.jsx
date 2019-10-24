@@ -31,6 +31,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import GitHubIcon from '@material-ui/icons/GitHub';
+// import Image from 'material-ui-image';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -70,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     margin: 0,
   },
-  gridList2: {
+  gridListB: {
     flexWrap: 'wrap',
     width: 'auto',
     height: 'cover',
@@ -164,7 +165,7 @@ export default function App() {
                 xs={12}>
                 <GridList className={classes.gridList}   cols={2}>
                   <GridListTile key={'React'}>
-                    <img src={ReactImg} alt={'ReactImg'} />
+                    <img className='imgGridFix' src={ReactImg} alt={'ReactImg'} />
                     <GridListTileBar
                       title={'React'}
                       classes={{
@@ -194,7 +195,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={CSS}>
-                    <img src={CSS} alt={'CSS'} />
+                    <img className='imgGridFix' src={CSS} alt={'CSS'} />
                     <GridListTileBar
                       title={'CSS'}
                       classes={{
@@ -204,7 +205,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={HTML}>
-                    <img src={HTML} alt={'HTML'} />
+                    <img className='imgGridFix' src={HTML} alt={'HTML'} />
                     <GridListTileBar
                       title={'HTML'}
                       classes={{
@@ -214,7 +215,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={JS}>
-                    <img src={JS} alt={'JS'} />
+                    <img className='imgGridFix' src={JS} alt={'JS'} />
                     <GridListTileBar
                       title={'JS'}
                       classes={{
@@ -224,7 +225,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={Postgres}>
-                    <img src={Postgres} alt={'Postgres'} />
+                    <img className='imgGridFix' src={Postgres} alt={'Postgres'} />
                     <GridListTileBar
                       title={'Postgres'}
                       classes={{
@@ -237,16 +238,6 @@ export default function App() {
                     <img src={NodeJS} alt={'NodeJS'} className='imgFix' />
                     <GridListTileBar
                       title={'NodeJS'}
-                      classes={{
-                        root: classes.titleBar,
-                        title: classes.title,
-                      }}
-                    />
-                  </GridListTile>
-                  <GridListTile key={HTML}>
-                    <img src={HTML} alt={'HTML'} />
-                    <GridListTileBar
-                      title={'HTML'}
                       classes={{
                         root: classes.titleBar,
                         title: classes.title,
@@ -271,12 +262,12 @@ export default function App() {
       
         <div className={classes.root}>
           <Grid justify={'center'} container={true}>
-            <GridList cellHeight={'auto'} className={classes.gridList2}>
+            <GridList cellHeight={'auto'} className={classes.gridListB}>
               <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
                 <ListSubheader component="div">Miguel's Projects</ListSubheader>
               </GridListTile>
               <GridListTile>
-                <img src={Runtime} alt={'Runtime: Cocktail Aid'} />
+                <img className='imgGridFix' src={Runtime} alt={'Runtime: Cocktail Aid'} />
                 <GridListTileBar
                   title={'Runtime: Cocktail Aid'}
                   subtitle={<span>by: Miguel and team</span>}
@@ -287,13 +278,13 @@ export default function App() {
                 />
               </GridListTile>
               <GridListTile>
-                <img src={TheHacks} alt={'The Hacks'}  />
+                <img src={TheHacks} alt={'The Hacks'} className='imgGridFix'  />
                 <GridListTileBar
                   title={'The Hacks'}
                   subtitle={<span>by: Miguel</span>}
                 />
               </GridListTile>
-              <GridListTile>
+              <GridListTile className='imgGridFix'>
                 <img src={Mars} alt={'Mars'} />
                 <GridListTileBar
                   title={'Mars'}
