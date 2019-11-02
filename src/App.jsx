@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Miguel from './Logos/Miguel_self.jpg';
 import Django from './Logos/django-logo-positive.svg';
@@ -31,7 +31,9 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import { ThemeProvider } from '@material-ui/styles';
 // import Image from 'material-ui-image';
+import { Document, Page } from 'react-pdf'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +41,18 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     margin: theme.spacing(6),
     justify: 'center',    
+  },
+  bio: {
+    width: 'auto',
+    margin: theme.spacing(10,35,10),
+    [theme.breakpoints.down('sm')]: {
+      margin: theme.spacing(5,15,10),
+    },
+    [theme.breakpoints.down('xs')]: {
+      margin: theme.spacing(4,4,4),
+      width: 'auto',
+    },
+
   },
   button: {
     margin: theme.spacing(1),
@@ -62,6 +76,13 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  listRoot: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+  },
   gridList: {
     flexWrap: 'wrap',
     transform: 'translateZ(0)',
@@ -72,12 +93,13 @@ const useStyles = makeStyles(theme => ({
     margin: 0,
   },
   gridListB: {
-    flexWrap: 'wrap',
-    width: 'auto',
-    height: 'cover',
-    justifyContent: 'center',
-    alignItems: 'center',
-
+    width: 'cover',
+    height: 900,
+  },
+  gridListBImg: {
+    width: 480,
+    height: 410,
+    objectFit: 'cover',
   },
   title: {
     color: theme.palette.primary,
@@ -114,7 +136,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-      <Typography align='center' paragraph={true} variant='body1' padding={12}>Welcome to my portfolio! My name is Miguel! I am an ambitious and fun person with skills in full stack development. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for your team!</Typography>
+      <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun person with skills in <b>full stack development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b></Typography>
       <Grid 
         container
         spacing={-5}
@@ -259,15 +281,14 @@ export default function App() {
             </Grid>
           </div>
         </Grid>
-      
-        <div className={classes.root}>
+        <div className={classes.listRoot}>
           <Grid justify={'center'} container={true}>
             <GridList cellHeight={'auto'} className={classes.gridListB}>
-              <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
+              <GridListTile key="Subheader" cols={2}>
                 <ListSubheader component="div">Miguel's Projects</ListSubheader>
               </GridListTile>
               <GridListTile>
-                <img className='imgGridFix' src={Runtime} alt={'Runtime: Cocktail Aid'} />
+                <img className={classes.gridListBImg} src={Runtime} alt={'Runtime: Cocktail Aid'} />
                 <GridListTileBar
                   title={'Runtime: Cocktail Aid'}
                   subtitle={<span>by: Miguel and team</span>}
@@ -278,14 +299,14 @@ export default function App() {
                 />
               </GridListTile>
               <GridListTile>
-                <img src={TheHacks} alt={'The Hacks'} className='imgGridFix'  />
+                <img className={classes.gridListBImg} src={TheHacks} alt={'The Hacks'} />
                 <GridListTileBar
                   title={'The Hacks'}
                   subtitle={<span>by: Miguel</span>}
                 />
               </GridListTile>
-              <GridListTile className='imgGridFix'>
-                <img src={Mars} alt={'Mars'} />
+              <GridListTile>
+                <img className={classes.gridListBImg} src={Mars} alt={'Mars'} />
                 <GridListTileBar
                   title={'Mars'}
                   subtitle={<span>by: Miguel</span>}
@@ -298,18 +319,6 @@ export default function App() {
             </GridList>
           </Grid>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
