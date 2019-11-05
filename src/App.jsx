@@ -13,6 +13,8 @@ import TS from './Logos/TypeScript.svg';
 import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
 import Mars from './Mars.png';
+import War from './War.png';
+import PokeDex from './PokeDex.png';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -32,8 +34,9 @@ import Fade from '@material-ui/core/Fade';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import { ThemeProvider } from '@material-ui/styles';
-// import Image from 'material-ui-image';
 import { Document, Page } from 'react-pdf'
+import Resume from './Resume/MiguelFloresca-Cravens_Resume.pdf';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -52,7 +55,6 @@ const useStyles = makeStyles(theme => ({
       margin: theme.spacing(4,4,4),
       width: 'auto',
     },
-
   },
   button: {
     margin: theme.spacing(1),
@@ -100,6 +102,10 @@ const useStyles = makeStyles(theme => ({
     width: 480,
     height: 410,
     objectFit: 'cover',
+    // alignItems: 'center',
+    // justify: 'center',
+    margin: 'auto',
+    display: 'flex'
   },
   title: {
     color: theme.palette.primary,
@@ -107,6 +113,13 @@ const useStyles = makeStyles(theme => ({
   titleBar: {
     background:
       'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+  },
+  projectLinks: {
+    marginRight: theme.spacing(2),
+    // color: 'white',
+  },
+  projectMain: {
+    marginBottom: theme.spacing(4),
   },
 }));
 
@@ -122,7 +135,7 @@ export default function App() {
   
   return (
     <div className={classes.root}>
-      <AppBar item xs={12} position="fixed">
+      <AppBar xs={12} position="fixed">
         <Toolbar>
           <IconButton 
               edge="start" 
@@ -136,25 +149,24 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-      <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun person with skills in <b>full stack development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b></Typography>
+      <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun developer with skills in <b>full stack web development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b> Feel free to view my <Link href='#skills'>skills</Link> and <Link href='#projects'>projects</Link> below.</Typography>
       <Grid 
         container
-        spacing={-5}
+        
         justify='center'>
-          <Grid container justify='center' xs={12}>
+          <Grid container justify='center'>
             <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                 Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid container justify='center' xs={12}>
+          <Grid container justify='center' >
             <Button className={classes.button} onClick={openModal} variant="contained" color='primary'>
               Contact Miguel via Phone
               <CallIcon className={classes.rightIcon}/>
             </Button>
           </Grid>
-          <Grid container justify='center' xs={12}>
+          <Grid container justify='center'>
             <Button 
-              item
               className={classes.button} 
               href="https://www.linkedin.com/in/miguelfloresca-cravens/"
               target="_blank"
@@ -164,7 +176,7 @@ export default function App() {
               <LinkedInIcon className={classes.rightIcon} />
             </Button>
           </Grid>
-          <Grid container justify='center' xs={12}>
+          <Grid container justify='center'>
             <Button 
               variant='contained' 
               color='primary' 
@@ -174,7 +186,7 @@ export default function App() {
             </Button>
           </Grid>
           <div className={classes.root}>
-            <Typography align='center' variant='h3'>Skills</Typography>
+            <Typography align='center' variant='h3' id="skills">Skills</Typography>
             <Grid 
               container 
               alignItems='center' 
@@ -184,10 +196,10 @@ export default function App() {
                 container
                 justify="center"
                 alignItems="center" 
-                xs={12}>
+                >
                 <GridList className={classes.gridList}   cols={2}>
                   <GridListTile key={'React'}>
-                    <img className='imgGridFix' src={ReactImg} alt={'ReactImg'} />
+                    <img className='imgFix' src={ReactImg} alt={'ReactImg'} />
                     <GridListTileBar
                       title={'React'}
                       classes={{
@@ -217,7 +229,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={CSS}>
-                    <img className='imgGridFix' src={CSS} alt={'CSS'} />
+                    <img className='imgFix' src={CSS} alt={'CSS'} />
                     <GridListTileBar
                       title={'CSS'}
                       classes={{
@@ -227,7 +239,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={HTML}>
-                    <img className='imgGridFix' src={HTML} alt={'HTML'} />
+                    <img className='imgFix' src={HTML} alt={'HTML'} />
                     <GridListTileBar
                       title={'HTML'}
                       classes={{
@@ -237,7 +249,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={JS}>
-                    <img className='imgGridFix' src={JS} alt={'JS'} />
+                    <img className='imgFix' src={JS} alt={'JS'} />
                     <GridListTileBar
                       title={'JS'}
                       classes={{
@@ -247,7 +259,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={Postgres}>
-                    <img className='imgGridFix' src={Postgres} alt={'Postgres'} />
+                    <img className='imgFix' src={Postgres} alt={'Postgres'} />
                     <GridListTileBar
                       title={'Postgres'}
                       classes={{
@@ -285,16 +297,15 @@ export default function App() {
           <Grid justify={'center'} container={true}>
             <GridList cellHeight={'auto'} className={classes.gridListB}>
               <GridListTile key="Subheader" cols={2}>
-                <ListSubheader component="div">Miguel's Projects</ListSubheader>
+                <Typography className={classes.projectMain} align='center' variant='h3' component="div" id='projects'>Miguel's Projects</Typography>
               </GridListTile>
               <GridListTile>
-                <img className={classes.gridListBImg} src={Runtime} alt={'Runtime: Cocktail Aid'} />
+                <img className={classes.gridListBImg} src={PokeDex} alt={'pokeDex'} />
                 <GridListTileBar
-                  title={'Runtime: Cocktail Aid'}
-                  subtitle={<span>by: Miguel and team</span>}
+                  title={'PokeDex'}
+                  subtitle={<span>by: Miguel</span>}
                   actionIcon={
-                    <IconButton className={classes.icon}>
-                    </IconButton>
+                    <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/myPokedex'>GitHub Repo</Button>
                   }
                 />
               </GridListTile>
@@ -303,6 +314,19 @@ export default function App() {
                 <GridListTileBar
                   title={'The Hacks'}
                   subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                    <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/project2'>GitHub Repo</Button>
+                  }
+                />
+              </GridListTile>
+              <GridListTile>
+                <img className={classes.gridListBImg} src={War} alt={'War'} />
+                <GridListTileBar
+                  title={'War'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                    <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/project1'>GitHub Repo</Button>
+                  }
                 />
               </GridListTile>
               <GridListTile>
@@ -311,13 +335,25 @@ export default function App() {
                   title={'Mars'}
                   subtitle={<span>by: Miguel</span>}
                   actionIcon={
-                    <IconButton className={classes.icon}>
-                    </IconButton>
+                    <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/mars'>GitHub Repo</Button>
+                  }
+                />
+              </GridListTile>
+              <GridListTile>
+                <img className={classes.gridListBImg} src={Runtime} alt={'Runtime: Cocktail Aid'} />
+                <GridListTileBar
+                  title={'Runtime: Cocktail Aid'}
+                  subtitle={<span>by: Miguel and team</span>}
+                  actionIcon={
+                    <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/ngolodets/runtime-terror'>GitHub Repo</Button>
                   }
                 />
               </GridListTile>
             </GridList>
           </Grid>
+        </div>
+        <div>
+          <Typography variant='h6' align='center' color='secondary'>Note: These projects are continually being worked on for improvement.</Typography>
         </div>
         <Modal
           aria-labelledby="transition-modal-title"
