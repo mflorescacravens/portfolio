@@ -120,7 +120,7 @@ const useStyles = makeStyles(theme => ({
     // color: 'white',
   },
   projectMain: {
-    marginBottom: theme.spacing(4),
+    margin: theme.spacing(8,0,4,0),
   },
 }));
 
@@ -153,7 +153,6 @@ export default function App() {
       <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun developer with skills in <b>full stack web development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b> Feel free to view my <Link href='#skills'>skills</Link> and <Link href='#projects'>projects</Link> below.</Typography>
       <Grid 
         container
-        
         justify='center'>
           <Grid container justify='center'>
             <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
@@ -168,7 +167,7 @@ export default function App() {
           </Grid>
           <Grid container justify='center'>
             <Button 
-              className={classes.button} 
+              className={classes.button}
               href="https://www.linkedin.com/in/miguelfloresca-cravens/"
               target="_blank"
               variant="contained" 
@@ -178,7 +177,8 @@ export default function App() {
             </Button>
           </Grid>
           <Grid container justify='center'>
-            <Button 
+            <Button
+              className={classes.button}
               variant='contained' 
               color='primary' 
               href="https://github.com/Guelito1">
@@ -186,7 +186,7 @@ export default function App() {
               <GitHubIcon className={classes.rightIcon} />
             </Button>
           </Grid>
-          <div className={classes.root}>
+          <div className={classes.projectMain}>
             <Typography align='center' variant='h3' id="skills">Skills</Typography>
             <Grid 
               container 
@@ -196,9 +196,8 @@ export default function App() {
               <Grid
                 container
                 justify="center"
-                alignItems="center" 
-                >
-                <GridList className={classes.gridList}   cols={2}>
+                alignItems="center">
+                <GridList className={classes.gridList} cols={2}>
                   <GridListTile key={'React'}>
                     <img id='react' className='imgFix' src={ReactImg} alt={'ReactImg'} />
                     <GridListTileBar
@@ -249,6 +248,16 @@ export default function App() {
                       }}
                     />
                   </GridListTile>
+                  <GridListTile key={TS}>
+                    <img id='ts' src={TS} alt={'TS'} className='imgFix' />
+                    <GridListTileBar
+                      title={'TS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
                   <GridListTile key={CSS}>
                     <img id='css' className='imgFix' src={CSS} alt={'CSS'} />
                     <GridListTileBar
@@ -279,16 +288,6 @@ export default function App() {
                       }}
                     />
                   </GridListTile>
-                  <GridListTile key={TS}>
-                    <img id='ts' src={TS} alt={'TS'} className='imgFix' />
-                    <GridListTileBar
-                      title={'TS'}
-                      classes={{
-                        root: classes.titleBar,
-                        title: classes.title,
-                      }}
-                    />
-                  </GridListTile>
                   <GridListTile key={HTML}>
                     <img className='imgFix' src={HTML} alt={'HTML'} />
                     <GridListTileBar
@@ -304,11 +303,11 @@ export default function App() {
             </Grid>
           </div>
         </Grid>
+        <Typography className={classes.projectMain} align='center' variant='h3' component="div" id='projects'>Miguel's Projects</Typography>
         <div className={classes.listRoot}>
           <Grid justify={'center'} container={true}>
             <GridList cellHeight={'auto'} className={classes.gridListB}>
               <GridListTile key="Subheader" cols={2}>
-                <Typography className={classes.projectMain} align='center' variant='h3' component="div" id='projects'>Miguel's Projects</Typography>
               </GridListTile>
               <GridListTile>
                 <img className={classes.gridListBImg} src={PokeDex} alt={'pokeDex'} />
