@@ -34,9 +34,9 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import { ThemeProvider } from '@material-ui/styles';
-import { Document, Page } from 'react-pdf'
 import Resume from './Resume/MiguelFloresca-Cravens_Resume.pdf';
+import LoR1 from './Resume/Letter-of-Rec-MiguelFC.pdf';
+import LoR2 from './Resume/Letter-of-Recommendation.pdf';
 import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
@@ -150,7 +150,7 @@ export default function App() {
         </Toolbar>
       </AppBar>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-      <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun developer with skills in <b>full stack web development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b> Feel free to view my <Link href='#skills'>skills</Link> and <Link href='#projects'>projects</Link> below.</Typography>
+      <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun developer with skills in <b>full stack web development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b> Feel free to view my <Link href='#skills'>skills</Link>, <Link href='#projects'>projects</Link>, and <Link href='#resume'>more</Link> below.</Typography>
       <Grid 
         container
         justify='center'>
@@ -365,6 +365,14 @@ export default function App() {
         <div>
           <Typography variant='h6' align='center' color='secondary'>Note: These projects are continually being worked on for improvement.</Typography>
         </div>
+        <div className={classes.projectMain}>
+          <Typography id='resume' variant='h4' align='center'>Resume and Letters of Recommendation</Typography>
+          <object width="100%" height="500"  data={Resume} type="application/pdf"></object>
+          <object width="100%" height="500"  data={LoR1} type="application/pdf"></object>
+          <object width="100%" height="500"  data={LoR2} type="application/pdf"></object>
+        </div>
+
+
         <Modal
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
