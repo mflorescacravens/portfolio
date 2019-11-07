@@ -10,6 +10,7 @@ import NodeJS from './Logos/node-brands1.svg';
 import Postgres from './Logos/postgresql.png';
 import ReactImg from './Logos/react-brands1.svg';
 import TS from './Logos/TypeScript.svg';
+import Angular from './Logos/angular.svg';
 import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
 import Mars from './Mars.png';
@@ -199,7 +200,7 @@ export default function App() {
                 >
                 <GridList className={classes.gridList}   cols={2}>
                   <GridListTile key={'React'}>
-                    <img className='imgFix' src={ReactImg} alt={'ReactImg'} />
+                    <img id='react' className='imgFix' src={ReactImg} alt={'ReactImg'} />
                     <GridListTileBar
                       title={'React'}
                       classes={{
@@ -208,10 +209,20 @@ export default function App() {
                       }}
                     />
                   </GridListTile>
-                  <GridListTile key={Django}>
-                    <img src={Django} alt={'Django'} className='imgFix' />
+                  <GridListTile key={Angular}>
+                    <img id='angular' src={Angular} alt={'Angular'} className='imgFix' />
                     <GridListTileBar
-                      title={'Django'}
+                      title={'Angular'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={JS}>
+                    <img id='javascript' className='imgFix' src={JS} alt={'JS'} />
+                    <GridListTileBar
+                      title={'JS'}
                       classes={{
                         root: classes.titleBar,
                         title: classes.title,
@@ -228,30 +239,20 @@ export default function App() {
                       }}
                     />
                   </GridListTile>
+                  <GridListTile key={Django}>
+                    <img src={Django} alt={'Django'} className='imgFix' />
+                    <GridListTileBar
+                      title={'Django'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
                   <GridListTile key={CSS}>
-                    <img className='imgFix' src={CSS} alt={'CSS'} />
+                    <img id='css' className='imgFix' src={CSS} alt={'CSS'} />
                     <GridListTileBar
                       title={'CSS'}
-                      classes={{
-                        root: classes.titleBar,
-                        title: classes.title,
-                      }}
-                    />
-                  </GridListTile>
-                  <GridListTile key={HTML}>
-                    <img className='imgFix' src={HTML} alt={'HTML'} />
-                    <GridListTileBar
-                      title={'HTML'}
-                      classes={{
-                        root: classes.titleBar,
-                        title: classes.title,
-                      }}
-                    />
-                  </GridListTile>
-                  <GridListTile key={JS}>
-                    <img className='imgFix' src={JS} alt={'JS'} />
-                    <GridListTileBar
-                      title={'JS'}
                       classes={{
                         root: classes.titleBar,
                         title: classes.title,
@@ -269,7 +270,7 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={NodeJS}>
-                    <img src={NodeJS} alt={'NodeJS'} className='imgFix' />
+                    <img id='node' src={NodeJS} alt={'NodeJS'} className='imgFix' />
                     <GridListTileBar
                       title={'NodeJS'}
                       classes={{
@@ -279,9 +280,19 @@ export default function App() {
                     />
                   </GridListTile>
                   <GridListTile key={TS}>
-                    <img src={TS} alt={'TS'} className='imgFix' />
+                    <img id='ts' src={TS} alt={'TS'} className='imgFix' />
                     <GridListTileBar
                       title={'TS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={HTML}>
+                    <img className='imgFix' src={HTML} alt={'HTML'} />
+                    <GridListTileBar
+                      title={'HTML'}
                       classes={{
                         root: classes.titleBar,
                         title: classes.title,
