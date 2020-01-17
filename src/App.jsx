@@ -11,6 +11,13 @@ import Postgres from './Logos/postgresql.png';
 import ReactImg from './Logos/react-brands1.svg';
 import TS from './Logos/TypeScript.svg';
 import Angular from './Logos/angular.svg';
+import CSharp from './Logos/C_Sharp_logo.png'
+import JQuery from './Logos/JQuery_logo.png'
+import noSQL from './Logos/nosql_logo.png'
+import Redux from './Logos/Redux_logo.png'
+import SASS from './Logos/Sass_logo.png'
+import SQL from './Logos/SQL_logo.jpg'
+import Vue from './Logos/Vue_logo.png'
 import Runtime from './Runtime.png';
 import TheHacks from './TheHacks.png';
 import Mars from './Mars.png';
@@ -222,6 +229,76 @@ export default function App() {
                     <img id='javascript' className='imgFix' src={JS} alt={'JS'} />
                     <GridListTileBar
                       title={'JS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={CSharp}>
+                    <img id='C#' className='imgFix' src={CSharp} alt={'C#'} />
+                    <GridListTileBar
+                      title={'C#'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={JQuery}>
+                    <img id='JQuery' className='imgFix' src={JQuery} alt={'JQuery'} />
+                    <GridListTileBar
+                      title={'JQuery'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={noSQL}>
+                    <img id='noSQL' className='imgFix' src={noSQL} alt={'noSQL'} />
+                    <GridListTileBar
+                      title={'noSQL'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={Redux}>
+                    <img src={Redux} alt={'Redux'} className='imgFix' />
+                    <GridListTileBar
+                      title={'Redux'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={SASS}>
+                    <img src={SASS} alt={'SASS'} className='imgFix' />
+                    <GridListTileBar
+                      title={'SASS'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={SQL}>
+                    <img src={SQL} alt={'SQL'} className='imgFix' />
+                    <GridListTileBar
+                      title={'SQL'}
+                      classes={{
+                        root: classes.titleBar,
+                        title: classes.title,
+                      }}
+                    />
+                  </GridListTile>
+                  <GridListTile key={Vue}>
+                    <img src={Vue} alt={'Vue'} className='imgFix' />
+                    <GridListTileBar
+                      title={'Vue'}
                       classes={{
                         root: classes.titleBar,
                         title: classes.title,
