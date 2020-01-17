@@ -34,7 +34,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import Resume from './Resume/MiguelFloresca-Cravens_Resume.pdf';
+import Resume from './Resume/MFloresca-Cravens_Resume.pdf';
 import LoR1 from './Resume/Letter-of-Rec-MiguelFC.pdf';
 import LoR2 from './Resume/Letter-of-Recommendation.pdf';
 import Link from '@material-ui/core/Link';
