@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -16,8 +16,9 @@ const useStyles = makeStyles(theme => ({
     title: {
       color: theme.palette.primary,
     },
-  }));
-  export default function App() {
+}));
+
+  export default function AppBars() {
     const classes = useStyles();
     
     return (

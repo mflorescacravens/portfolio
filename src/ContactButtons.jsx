@@ -7,26 +7,44 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Modal from '@material-ui/core/Modal';
+import Backdrop from '@material-ui/core/Backdrop';
+import Fade from '@material-ui/core/Fade';
+import Typography from '@material-ui/core/Typography';
 
 
 const useStyles = makeStyles(theme => ({
     root: {
-      flexGrow: 1,
-      backgroundColor: theme.palette.background.paper,
-      margin: theme.spacing(6),
-      justify: 'center',    
+        flexGrow: 1,
+        backgroundColor: theme.palette.background.paper,
+        margin: theme.spacing(6),
+        justify: 'center',    
     },
     button: {
         margin: theme.spacing(1),
     },
     rightIcon: {
-    marginLeft: theme.spacing(1),
+        marginLeft: theme.spacing(1),
+    },
+    modal: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    paper: {
+        textAlign: 'center',
+        color: theme.palette.text.secondary,
+        backgroundColor: theme.palette.background.paper,
+        border: '2px solid black',
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(4, 4, 4),
     },
   }));
 
 
 export default function App() {
     const classes = useStyles();
+    const [modal, setModal] = React.useState(false);
     const openModal = () => {
         setModal(true);
       }
@@ -68,6 +86,26 @@ export default function App() {
                 <GitHubIcon className={classes.rightIcon} />
                 </Button>
             </Grid>
+
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className={classes.modal}
+                open={modal}
+                onClose={closeModal}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+                >
+                <Fade in={modal}>
+                    <div className={classes.paper}>
+                    <h2 id="transition-modal-title">Miguel's Phone Number</h2>
+                    <Typography id="transition-modal-description">(206) 941-1312</Typography>
+                    </div>
+                </Fade>
+            </Modal>
         </div>
     )
 }
