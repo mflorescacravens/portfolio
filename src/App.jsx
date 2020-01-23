@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from './AppBar';
+import ContactButtons from './ContactButtons';
 import Miguel from './Logos/Miguel_self.jpg';
 import Django from './Logos/django-logo-positive.svg';
 import MongoDB from './Logos/mongodb.svg';
@@ -24,23 +27,14 @@ import Mars from './Mars.png';
 import War from './War.png';
 import PokeDex from './PokeDex.png';
 import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import { makeStyles } from '@material-ui/core/styles';
-import IconButton from '@material-ui/core/IconButton';
-import SendIcon from '@material-ui/icons/Send';
-import CallIcon from '@material-ui/icons/Call';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import Resume from './Resume/MFloresca-Cravens_Resume.pdf';
 import LoR1 from './Resume/Letter-of-Rec-MiguelFC.pdf';
 import LoR2 from './Resume/Letter-of-Recommendation.pdf';
@@ -64,9 +58,6 @@ const useStyles = makeStyles(theme => ({
       width: 'auto',
     },
   },
-  button: {
-    margin: theme.spacing(1),
-  },
   paper: {
     textAlign: 'center',
     color: theme.palette.text.secondary,
@@ -77,9 +68,6 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.5)',
-  },
-  rightIcon: {
-    marginLeft: theme.spacing(1),
   },
   modal: {
     display: 'flex',
@@ -115,9 +103,6 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     display: 'flex'
   },
-  title: {
-    color: theme.palette.primary,
-  },
   titleBar: {
     background:
       'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
@@ -129,6 +114,9 @@ const useStyles = makeStyles(theme => ({
   projectMain: {
     margin: theme.spacing(8,0,4,0),
   },
+  resumeAndLet: {
+    marginBottom: theme.spacing(5)
+  }
 }));
 
 export default function App() {
@@ -143,7 +131,7 @@ export default function App() {
   
   return (
     <div className={classes.root}>
-      <AppBar xs={12} position="fixed">
+      {/* <AppBar xs={12} position="fixed">
         <Toolbar>
           <IconButton 
               edge="start" 
@@ -155,10 +143,11 @@ export default function App() {
             Miguel Floresca-Cravens
           </Typography>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
+      <AppBar />
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
       <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is <b>Miguel</b>! I am an ambitious and fun developer with skills in <b>full stack web development</b>. I have a background in finance and I have a passion for music. I look forward to using my skills in future projects for <b>your team!</b> Feel free to view my <Link href='#skills'>skills</Link>, <Link href='#projects'>projects</Link>, and <Link href='#resume'>more</Link> below.</Typography>
-      <Grid 
+      {/* <Grid 
         container
         justify='center'>
           <Grid container justify='center'>
@@ -192,7 +181,8 @@ export default function App() {
                 Contact Miguel via Github
               <GitHubIcon className={classes.rightIcon} />
             </Button>
-          </Grid>
+          </Grid> */}
+          <ContactButtons />
           <div className={classes.projectMain}>
             <Typography align='center' variant='h3' id="skills">Skills</Typography>
             <Grid 
@@ -379,7 +369,7 @@ export default function App() {
               </Grid>
             </Grid>
           </div>
-        </Grid>
+        {/* </Grid> */}
         <Typography className={classes.projectMain} align='center' variant='h3' component="div" id='projects'>Miguel's Projects</Typography>
         <div className={classes.listRoot}>
           <Grid justify={'center'} container={true}>
@@ -444,9 +434,9 @@ export default function App() {
         </div>
         <div className={classes.projectMain}>
           <Typography id='resume' variant='h4' align='center'>Resume and Letters of Recommendation</Typography>
-          <object width="100%" height="500"  data={Resume} type="application/pdf"></object>
-          <object width="100%" height="500"  data={LoR1} type="application/pdf"></object>
-          <object width="100%" height="500"  data={LoR2} type="application/pdf"></object>
+          <object className={classes.resumeAndLet} width="100%" height="500"  data={Resume} type="application/pdf"></object>
+          <object className={classes.resumeAndLet} width="100%" height="500"  data={LoR1} type="application/pdf"></object>
+          <object className={classes.resumeAndLet} width="100%" height="500"  data={LoR2} type="application/pdf"></object>
         </div>
 
 
