@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
         backgroundColor: theme.palette.background.paper,
-        margin: theme.spacing(6),
+        margin: theme.spacing(10),
         justify: 'center',    
     },
     button: {
@@ -53,7 +53,7 @@ export default function App() {
       }
 
     return(
-        <div>
+        <div className={classes.root}>
             <Grid container justify='center'>
                 <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                     Contact Miguel via Email <SendIcon className={classes.rightIcon}/>

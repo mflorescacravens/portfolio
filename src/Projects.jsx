@@ -54,15 +54,6 @@ const useStyles = makeStyles(theme => ({
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
       },
-      // gridList: {
-      //   flexWrap: 'wrap',
-      //   transform: 'translateZ(0)',
-      //   width: 'cover',
-      //   height: '250',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   margin: 0,
-      // },
       gridListB: {
         width: 'cover',
         height: 900,
@@ -71,18 +62,11 @@ const useStyles = makeStyles(theme => ({
         width: 480,
         height: 410,
         objectFit: 'cover',
-        // alignItems: 'center',
-        // justify: 'center',
         margin: 'auto',
         display: 'flex'
       },
-      // titleBar: {
-      //   background:
-      //     'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-      // },
       projectLinks: {
         marginRight: theme.spacing(2),
-        // color: 'white',
       },
       projectMain: {
         margin: theme.spacing(8,0,4,0),
