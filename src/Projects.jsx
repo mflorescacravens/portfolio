@@ -14,38 +14,8 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-        backgroundColor: theme.palette.background.paper,
-        margin: theme.spacing(6),
-        justify: 'center',    
-      },
-      bio: {
-        width: 'auto',
-        margin: theme.spacing(10,35,10),
-        [theme.breakpoints.down('sm')]: {
-          margin: theme.spacing(5,15,10),
-        },
-        [theme.breakpoints.down('xs')]: {
-          margin: theme.spacing(4,4,4),
-          width: 'auto',
-        },
-      },
-      paper: {
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-        backgroundColor: theme.palette.background.paper,
-        border: '2px solid black',
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing(4, 4, 4),
-      },
-      icon: {
-        color: 'rgba(255, 255, 255, 0.5)',
-      },
-      modal: {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+      root: {
+        marginBottom: theme.spacing(8),
       },
       listRoot: {
         display: 'flex',
@@ -68,80 +38,72 @@ const useStyles = makeStyles(theme => ({
       projectLinks: {
         marginRight: theme.spacing(2),
       },
-      projectMain: {
-        margin: theme.spacing(8,0,4,0),
-    },
-    
-    
 }));
 
 export default function Projects() {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return(
-        <div>
-            <Typography className={classes.projectMain} align='center' variant='h3' component="div" id='projects'>Miguel's Projects</Typography>
-            <div className={classes.listRoot}>
-                    <Grid justify={'center'} container={true}>
-                        <GridList cellHeight={'auto'} className={classes.gridListB}>
-                            <GridListTile key="Subheader" cols={2}>
-                            </GridListTile>
-                        <GridListTile>
-                            <img className={classes.gridListBImg} src={PokeDex} alt={'pokeDex'} />
-                            <GridListTileBar
-                            title={'PokeDex'}
-                            subtitle={<span>by: Miguel</span>}
-                            actionIcon={
-                                <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/myPokedex'>GitHub Repo</Button>
-                            }
-                            />
-                        </GridListTile>
-                        <GridListTile>
-                            <img className={classes.gridListBImg} src={TheHacks} alt={'The Hacks'} />
-                            <GridListTileBar
-                            title={'The Hacks'}
-                            subtitle={<span>by: Miguel</span>}
-                            actionIcon={
-                                <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/project2'>GitHub Repo</Button>
-                            }
-                            />
-                        </GridListTile>
-                        <GridListTile>
-                            <img className={classes.gridListBImg} src={War} alt={'War'} />
-                            <GridListTileBar
-                            title={'War'}
-                            subtitle={<span>by: Miguel</span>}
-                            actionIcon={
-                                <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/project1'>GitHub Repo</Button>
-                            }
-                            />
-                        </GridListTile>
-                        <GridListTile>
-                            <img className={classes.gridListBImg} src={Mars} alt={'Mars'} />
-                            <GridListTileBar
-                            title={'Mars'}
-                            subtitle={<span>by: Miguel</span>}
-                            actionIcon={
-                                <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/mars'>GitHub Repo</Button>
-                            }
-                            />
-                        </GridListTile>
-                        <GridListTile>
-                            <img className={classes.gridListBImg} src={Runtime} alt={'Runtime: Cocktail Aid'} />
-                            <GridListTileBar
-                            title={'Runtime: Cocktail Aid'}
-                            subtitle={<span>by: Miguel and team</span>}
-                            actionIcon={
-                                <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/ngolodets/runtime-terror'>GitHub Repo</Button>
-                            }
-                            />
-                        </GridListTile>
-                        </GridList>
-                    </Grid>
-                </div>
-            <div>
-                <Typography variant='h6' align='center' color='secondary'>Note: These projects are continually being worked on for improvement.</Typography>
-            </div>
+  return(
+    <div className={classes.root}>
+      <Typography className={classes.projectMain} align='center' variant='h3' component="div" id='projects'>Miguel's Projects</Typography>
+        <div className={classes.listRoot}>
+          <Grid justify={'center'} container={true}>
+              <GridList cellHeight={'auto'} className={classes.gridListB}>
+                  <GridListTile key="Subheader" cols={2}>
+                  </GridListTile>
+              <GridListTile>
+                  <img className={classes.gridListBImg} src={PokeDex} alt={'pokeDex'} />
+                  <GridListTileBar
+                  title={'PokeDex'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                      <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/myPokedex'>GitHub Repo</Button>
+                  }
+                  />
+              </GridListTile>
+              <GridListTile>
+                  <img className={classes.gridListBImg} src={TheHacks} alt={'The Hacks'} />
+                  <GridListTileBar
+                  title={'The Hacks'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                      <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/project2'>GitHub Repo</Button>
+                  }
+                  />
+              </GridListTile>
+              <GridListTile>
+                  <img className={classes.gridListBImg} src={War} alt={'War'} />
+                  <GridListTileBar
+                  title={'War'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                      <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/project1'>GitHub Repo</Button>
+                  }
+                  />
+              </GridListTile>
+              <GridListTile>
+                  <img className={classes.gridListBImg} src={Mars} alt={'Mars'} />
+                  <GridListTileBar
+                  title={'Mars'}
+                  subtitle={<span>by: Miguel</span>}
+                  actionIcon={
+                      <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/mars'>GitHub Repo</Button>
+                  }
+                  />
+              </GridListTile>
+              <GridListTile>
+                  <img className={classes.gridListBImg} src={Runtime} alt={'Runtime: Cocktail Aid'} />
+                  <GridListTileBar
+                  title={'Runtime: Cocktail Aid'}
+                  subtitle={<span>by: Miguel and team</span>}
+                  actionIcon={
+                      <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/ngolodets/runtime-terror'>GitHub Repo</Button>
+                  }
+                  />
+              </GridListTile>
+              </GridList>
+          </Grid>
         </div>
-    )
+    </div>
+  )
 }
