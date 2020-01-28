@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
       flexGrow: 1,
       justify: 'center',
       marginLeft: theme.spacing(3),
-
+      color: 'white',
+      float: 'right',      
     }
 }));
 
@@ -45,20 +46,20 @@ export default function AppBars() {
             Miguel Floresca-Cravens
           </Typography>
           <Link to='/'>
-            <Button variant='outlined'  size='large' className={classes.nav}>Home</Button>
+            <Button variant='outlined' size='large' className={classes.nav}>Home</Button>
           </Link>
           <Link to='/contact'>
-            <Button variant='outlined'  size='large' className={classes.nav}>Contact</Button>
+            <Button variant='outlined' size='large' className={classes.nav}>Contact</Button>
           </Link>
           <Link to='/skills'>
-            <Button variant='outlined'  size='large' className={classes.nav}>Skills</Button>
+            <Button variant='outlined' size='large' className={classes.nav}>Skills</Button>
           </Link>
           <Link to='/projects'>
-            <Button variant='outlined'  size='large' className={classes.nav}>Projects</Button>
+            <Button variant='outlined' size='large' className={classes.nav}>Projects</Button>
           </Link>
-          <Link to='/resume'>
-            <Button variant='outlined'  size='large' className={classes.nav}>Resume</Button>
-          </Link>
+          {/* <Link to='/resume'>
+            <Button variant='outlined' size='large' className={classes.nav}>Resume</Button>
+          </Link> */}
         </Toolbar>
       </AppBar>
     </div>

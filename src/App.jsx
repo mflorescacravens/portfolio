@@ -41,7 +41,7 @@ export default function App() {
           <Route path="/contact" exact component={ContactButtons} />
           <Route path="/skills" exact component={Skills} />
           <Route path="/projects" exact component={Projects} />
-          <Route path="/resume" exact component={ResumeAndLet} />
+          {/* <Route path="/resume" exact component={ResumeAndLet} /> */}
         </Switch>
       </div>
     </Router>
