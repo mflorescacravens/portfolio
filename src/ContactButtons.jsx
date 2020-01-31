@@ -56,38 +56,40 @@ export default function App() {
     return(
         <div className={classes.root}>
             <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-            <Grid container justify='center'>
-                <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
-                    Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
-                </Button>
-            </Grid>
-            <Grid container justify='center' >
-                <Button className={classes.button} onClick={openModal} variant="contained" color='primary'>
-                Contact Miguel via Phone
-                <CallIcon className={classes.rightIcon}/>
-                </Button>
-            </Grid>
-            <Grid container justify='center'>
-                <Button 
-                className={classes.button}
-                href="https://www.linkedin.com/in/miguelfloresca-cravens/"
-                target="_blank"
-                variant="contained" 
-                color='primary'>
-                    Contact Miguel via LinkedIn
-                <LinkedInIcon className={classes.rightIcon} />
-                </Button>
-            </Grid>
-            <Grid container justify='center'>
-                <Button
-                className={classes.button}
-                variant='contained' 
-                color='primary' 
-                href="https://github.com/Guelito1">
-                    Contact Miguel via Github
-                <GitHubIcon className={classes.rightIcon} />
-                </Button>
-            </Grid>
+            <div className="compFadeIn">
+                <Grid container justify='center'>
+                    <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
+                        Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
+                    </Button>
+                </Grid>
+                <Grid container justify='center' >
+                    <Button className={classes.button} onClick={openModal} variant="contained" color='primary'>
+                    Contact Miguel via Phone
+                    <CallIcon className={classes.rightIcon}/>
+                    </Button>
+                </Grid>
+                <Grid container justify='center'>
+                    <Button 
+                    className={classes.button}
+                    href="https://www.linkedin.com/in/miguelfloresca-cravens/"
+                    target="_blank"
+                    variant="contained" 
+                    color='primary'>
+                        Contact Miguel via LinkedIn
+                    <LinkedInIcon className={classes.rightIcon} />
+                    </Button>
+                </Grid>
+                <Grid container justify='center'>
+                    <Button
+                    className={classes.button}
+                    variant='contained' 
+                    color='primary' 
+                    href="https://github.com/Guelito1">
+                        Contact Miguel via Github
+                    <GitHubIcon className={classes.rightIcon} />
+                    </Button>
+                </Grid>
+            </div>
 
             <Modal
                 aria-labelledby="transition-modal-title"

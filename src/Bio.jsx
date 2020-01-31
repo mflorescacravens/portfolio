@@ -33,7 +33,9 @@ export default function Bio() {
   return (
     <div className={classes.root}>
       <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
-      <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is Miguel Floresca-Cravens and I am an ambitious developer with skills in full stack web development. I have a background in management, finance, sales, and customer service. I look forward to using my skills in future projects for your team! Feel free to view my <Link href='#skills'>skills</Link>, <Link href='#projects'>projects</Link>, and <Link href='#resume'>more</Link>.</Typography>
+      <div id="bioFade">
+        <Typography align='center' paragraph={true} variant='body1' className={classes.bio}>Welcome to my portfolio! My name is Miguel Floresca-Cravens and I am an ambitious developer with skills in full stack web development. I have a background in management, finance, sales, and customer service. I look forward to using my skills in future projects for your team! Feel free to view my <Link href='/skills'>skills</Link> and <Link href='/projects'>projects</Link>.</Typography>
+      </div>
     </div>
   );
 }

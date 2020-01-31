@@ -51,6 +51,7 @@ export default function Skills() {
 
     return(
         <div className={classes.projectMain}>
+          <div className="compFadeIn">
             <Typography align='center' variant='h3' id="skills">Skills</Typography>
             <div>
               <Grid 
@@ -238,5 +239,6 @@ export default function Skills() {
               </Grid>
             </div>
           </div>
+      </div>
     )
 }

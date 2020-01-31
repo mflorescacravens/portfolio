@@ -21,6 +21,11 @@ svg {
   object-fit: cover;
 }
 
+.compFadeIn {
+  animation: compFadeIn 1s;
+  animation-timing-function: ease-in-out;
+}
+
 #react {
   filter: invert(100%) sepia(20%) saturate(6396%) hue-rotate(169deg) brightness(95%) contrast(89%);
 }
@@ -45,6 +50,34 @@ svg {
   filter: invert(56%) sepia(43%) saturate(621%) hue-rotate(165deg) brightness(90%) contrast(84%);
 }
 
+#bioFade {
+  animation: fadein 1.5s;
+  animation-timing-function: ease-in-out;
+}
 
 
+@keyframes fadein {
+  0%  {
+    opacity: 0;
+    transform: translateY(300px)
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes compFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+}
 

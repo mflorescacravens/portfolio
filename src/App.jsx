@@ -6,7 +6,6 @@ import Bio from './Bio';
 import ContactButtons from './ContactButtons';
 import Skills from './Skills';
 import Projects from './Projects';
-import ResumeAndLet from './ResumeAndLet';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const useStyles = makeStyles(theme => ({
@@ -15,17 +14,17 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     justify: 'center',    
   },
-  bio: {
-    width: 'auto',
-    margin: theme.spacing(10,35,10),
-    [theme.breakpoints.down('sm')]: {
-      margin: theme.spacing(5,15,10),
-    },
-    [theme.breakpoints.down('xs')]: {
-      margin: theme.spacing(4,4,4),
-      width: 'auto',
-    },
-  },
+  // bio: {
+  //   width: 'auto',
+  //   margin: theme.spacing(10,35,10),
+  //     [theme.breakpoints.down('sm')]: {
+  //       margin: theme.spacing(5,15,10),
+  //   },
+  //   [theme.breakpoints.down('xs')]: {
+  //     margin: theme.spacing(4,4,4),
+  //     width: 'auto',
+  //   },
+  // },
 }));
 
 export default function App() {

@@ -25,8 +25,8 @@ const useStyles = makeStyles(theme => ({
       justify: 'center',
       marginLeft: theme.spacing(3),
       color: 'white',
-      float: 'right',      
-    }
+      float: 'left',      
+    },
 }));
 
 export default function AppBars() {
@@ -45,18 +45,21 @@ export default function AppBars() {
           <Typography variant="h6" className={classes.title}>
             Miguel Floresca-Cravens
           </Typography>
-          <Link to='/'>
-            <Button variant='outlined' size='large' className={classes.nav}>Home</Button>
-          </Link>
-          <Link to='/contact'>
-            <Button variant='outlined' size='large' className={classes.nav}>Contact</Button>
-          </Link>
-          <Link to='/skills'>
-            <Button variant='outlined' size='large' className={classes.nav}>Skills</Button>
-          </Link>
-          <Link to='/projects'>
-            <Button variant='outlined' size='large' className={classes.nav}>Projects</Button>
-          </Link>
+          <div>
+            <Link to='/'>
+              <Button variant='outlined' size='large' className={classes.nav}>Home</Button>
+            </Link>
+            <Link to='/contact'>
+              <Button variant='outlined' size='large' className={classes.nav}>Contact</Button>
+            </Link>
+            <Link to='/skills'>
+              <Button variant='outlined' size='large' className={classes.nav}>Skills</Button>
+            </Link>
+            <Link to='/projects'>
+              <Button variant='outlined' size='large' className={classes.nav}>Projects</Button>
+            </Link>
+          </div>
+
           {/* <Link to='/resume'>
             <Button variant='outlined' size='large' className={classes.nav}>Resume</Button>
           </Link> */}
