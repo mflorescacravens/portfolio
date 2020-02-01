@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -44,6 +44,15 @@ const StyledMenuItem = withStyles(theme => ({
 }))(MenuItem);
 
 export default function HamMenu() {
+    const useStyles = makeStyles(theme => ({
+        container: {
+            display: 'flex',
+            justifyContent: 'space-around'
+        },
+        // button: {
+        //     backgroundColor: 'green',
+        // },
+    }));
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleClick = event => {
@@ -54,17 +63,21 @@ export default function HamMenu() {
         setAnchorEl(null);
     };
 
+    const classes = useStyles();
     return (
         <div>
-            <Button
-                aria-controls="customized-menu"
-                aria-haspopup="true"
-                variant="contained"
-                color="primary"
-                onClick={handleClick}
-                >
-                <MenuIcon />
-            </Button>
+            <div className={classes.container}>
+                <Button
+                    aria-controls="customized-menu"
+                    aria-haspopup="true"
+                    variant="contained"
+                    color="primary"
+                    onClick={handleClick}
+                    className={classes.button}
+                    >
+                    <MenuIcon />
+                </Button>
+            </div>
             <StyledMenu
                 id="customized-menu"
                 anchorEl={anchorEl}

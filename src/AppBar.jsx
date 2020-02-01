@@ -15,11 +15,17 @@ const useStyles = makeStyles(theme => ({
       flexGrow: 1,
       backgroundColor: theme.palette.background.paper,
       margin: theme.spacing(6),
-      justify: 'center',
+      // justify: 'center',
       marginBottom: theme.spacing(18),
     },
     title: {
       color: theme.palette.primary,
+      [theme.breakpoints.down('sm')]: {
+        fontSize: '15px'
+      },
+      [theme.breakpoints.down('xs')]: {
+        fontSize: '12px'
+      }
     },
     menu: {
       [theme.breakpoints.down('sm')]: {
@@ -30,8 +36,10 @@ const useStyles = makeStyles(theme => ({
       display: 'none',
       [theme.breakpoints.down('sm')]: {
         display: 'block',
-        backgroundColor: 'purple',
-        textAlign: 'right',
+        float: 'right',
+        width: '100%',
+        // justifyContent: 'flex-end',
+        backgroundColor: 'green',
       }
     },
     nav: {
