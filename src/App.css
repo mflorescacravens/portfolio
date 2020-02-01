@@ -30,6 +30,10 @@ svg {
   transition: transform .1s;
 }
 
+.hoverZoom:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 #react {
   filter: invert(100%) sepia(20%) saturate(6396%) hue-rotate(169deg) brightness(95%) contrast(89%);
 }
@@ -83,8 +87,4 @@ svg {
     opacity: 1;
     transform: translateY(0px)
   }
-}
-
-.hoverZoom:hover {
-  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }

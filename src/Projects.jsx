@@ -37,6 +37,9 @@ const useStyles = makeStyles(theme => ({
       },
       projectLinks: {
         marginRight: theme.spacing(2),
+        "&:hover": {
+          transform: 'scale(1.1)',  
+        }
       },
 }));
 

@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button'
 import { Link } from 'react-router-dom';
+import Menu from './Menu'
 
 
 const useStyles = makeStyles(theme => ({
@@ -20,12 +21,29 @@ const useStyles = makeStyles(theme => ({
     title: {
       color: theme.palette.primary,
     },
+    menu: {
+      [theme.breakpoints.down('sm')]: {
+        display: 'none',
+      }
+    },
+    hamburgerMenu: {
+      display: 'none',
+      [theme.breakpoints.down('sm')]: {
+        display: 'block',
+        backgroundColor: 'purple',
+        textAlign: 'right',
+      }
+    },
     nav: {
       flexGrow: 1,
       justify: 'center',
       marginLeft: theme.spacing(3),
       color: 'white',
-      float: 'left',      
+      float: 'left',
+      "&:hover": {
+        backgroundColor: "green",
+        transform: 'scale(1.2)',
+      }
     },
 }));
 
@@ -45,7 +63,7 @@ export default function AppBars() {
           <Typography variant="h6" className={classes.title}>
             Miguel Floresca-Cravens
           </Typography>
-          <div>
+          <div className={classes.menu}>
             <Link to='/'>
               <Button variant='outlined' size='large' className={classes.nav}>Home</Button>
             </Link>
@@ -59,7 +77,9 @@ export default function AppBars() {
               <Button variant='outlined' size='large' className={classes.nav}>Projects</Button>
             </Link>
           </div>
-
+          <div className={classes.hamburgerMenu}>
+            <Menu />
+          </div>
           {/* <Link to='/resume'>
             <Button variant='outlined' size='large' className={classes.nav}>Resume</Button>
           </Link> */}
