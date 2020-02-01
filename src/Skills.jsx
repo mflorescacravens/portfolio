@@ -64,7 +64,7 @@ export default function Skills() {
                   justify="center"
                   alignItems="center">
                   <GridList className={classes.gridList} cols={2}>
-                    <GridListTile key={'React'}>
+                    <GridListTile key={'React'} className="hoverZoom">
                       <img id='react' className='imgFix' src={ReactImg} alt={'ReactImg'} />
                       <GridListTileBar
                         title={'React'}
@@ -74,7 +74,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={Angular}>
+                    <GridListTile key={Angular} className="hoverZoom">
                       <img id='angular' src={Angular} alt={'Angular'} className='imgFix' />
                       <GridListTileBar
                         title={'Angular'}
@@ -84,7 +84,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={JS}>
+                    <GridListTile key={JS} className="hoverZoom">
                       <img id='javascript' className='imgFix' src={JS} alt={'JS'} />
                       <GridListTileBar
                         title={'JS'}
@@ -94,7 +94,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={CSharp}>
+                    <GridListTile key={CSharp} className="hoverZoom">
                       <img id='C#' className='imgFix' src={CSharp} alt={'C#'} />
                       <GridListTileBar
                         title={'C#'}
@@ -104,7 +104,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={JQuery}>
+                    <GridListTile key={JQuery} className="hoverZoom">
                       <img id='JQuery' className='imgFix' src={JQuery} alt={'JQuery'} />
                       <GridListTileBar
                         title={'JQuery'}
@@ -114,7 +114,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={noSQL}>
+                    <GridListTile key={noSQL} className="hoverZoom">
                       <img id='noSQL' className='imgFix' src={noSQL} alt={'noSQL'} />
                       <GridListTileBar
                         title={'noSQL'}
@@ -124,7 +124,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={Redux}>
+                    <GridListTile key={Redux} className="hoverZoom">
                       <img src={Redux} alt={'Redux'} className='imgFix' />
                       <GridListTileBar
                         title={'Redux'}
@@ -134,7 +134,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={SASS}>
+                    <GridListTile key={SASS} className="hoverZoom">
                       <img src={SASS} alt={'SASS'} className='imgFix' />
                       <GridListTileBar
                         title={'SASS'}
@@ -144,7 +144,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={SQL}>
+                    <GridListTile key={SQL} className="hoverZoom">
                       <img src={SQL} alt={'SQL'} className='imgFix' />
                       <GridListTileBar
                         title={'SQL'}
@@ -154,7 +154,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={Vue}>
+                    <GridListTile key={Vue} className="hoverZoom">
                       <img src={Vue} alt={'Vue'} className='imgFix' />
                       <GridListTileBar
                         title={'Vue'}
@@ -164,7 +164,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={MongoDB}>
+                    <GridListTile key={MongoDB} className="hoverZoom">
                       <img src={MongoDB} alt={'MongoDB'} className='imgFix' />
                       <GridListTileBar
                         title={'MongoDB'}
@@ -174,7 +174,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={Django}>
+                    <GridListTile key={Django} className="hoverZoom">
                       <img src={Django} alt={'Django'} className='imgFix' />
                       <GridListTileBar
                         title={'Django'}
@@ -184,7 +184,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={TS}>
+                    <GridListTile key={TS} className="hoverZoom">
                       <img id='ts' src={TS} alt={'TS'} className='imgFix' />
                       <GridListTileBar
                         title={'TS'}
@@ -194,7 +194,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={CSS}>
+                    <GridListTile key={CSS} className="hoverZoom">
                       <img id='css' className='imgFix' src={CSS} alt={'CSS'} />
                       <GridListTileBar
                         title={'CSS'}
@@ -204,7 +204,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={Postgres}>
+                    <GridListTile key={Postgres} className="hoverZoom">
                       <img className='imgFix' src={Postgres} alt={'Postgres'} />
                       <GridListTileBar
                         title={'Postgres'}
@@ -214,7 +214,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={NodeJS}>
+                    <GridListTile key={NodeJS} className="hoverZoom">
                       <img id='node' src={NodeJS} alt={'NodeJS'} className='imgFix' />
                       <GridListTileBar
                         title={'NodeJS'}
@@ -224,7 +224,7 @@ export default function Skills() {
                         }}
                       />
                     </GridListTile>
-                    <GridListTile key={HTML}>
+                    <GridListTile key={HTML} className="hoverZoom">
                       <img className='imgFix' src={HTML} alt={'HTML'} />
                       <GridListTileBar
                         title={'HTML'}

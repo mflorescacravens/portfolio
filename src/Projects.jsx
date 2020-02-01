@@ -102,7 +102,7 @@ export default function Projects() {
                     }
                     />
                 </GridListTile>
-                </GridList>
+              </GridList>
             </Grid>
           </div>
       </div>

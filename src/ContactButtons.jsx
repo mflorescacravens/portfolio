@@ -57,18 +57,18 @@ export default function App() {
         <div className={classes.root}>
             <img className="self" xs={12} src={Miguel} alt="Miguel Floresca-Cravens"/>
             <div className="compFadeIn">
-                <Grid container justify='center'>
+                <Grid container justify='center' className="hoverZoom">
                     <Button className={classes.button} href="mailto:mflorescacravens@gmail.com" variant="contained" color='primary'>
                         Contact Miguel via Email <SendIcon className={classes.rightIcon}/>
                     </Button>
                 </Grid>
-                <Grid container justify='center' >
+                <Grid container justify='center' className="hoverZoom">
                     <Button className={classes.button} onClick={openModal} variant="contained" color='primary'>
                     Contact Miguel via Phone
                     <CallIcon className={classes.rightIcon}/>
                     </Button>
                 </Grid>
-                <Grid container justify='center'>
+                <Grid container justify='center' className="hoverZoom">
                     <Button 
                     className={classes.button}
                     href="https://www.linkedin.com/in/miguelfloresca-cravens/"
@@ -79,7 +79,7 @@ export default function App() {
                     <LinkedInIcon className={classes.rightIcon} />
                     </Button>
                 </Grid>
-                <Grid container justify='center'>
+                <Grid container justify='center' className="hoverZoom">
                     <Button
                     className={classes.button}
                     variant='contained' 
