@@ -35,11 +35,11 @@ const useStyles = makeStyles(theme => ({
     hamburgerMenu: {
       display: 'none',
       [theme.breakpoints.down('sm')]: {
-        display: 'block',
-        float: 'right',
+        display: 'flex',
+        // float: 'right',
+        justifyContent: 'flex-end',
         width: '100%',
-        // justifyContent: 'flex-end',
-        backgroundColor: 'green',
+        // backgroundColor: 'green',
       }
     },
     nav: {

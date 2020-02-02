@@ -46,11 +46,11 @@ const StyledMenuItem = withStyles(theme => ({
 export default function HamMenu() {
     const useStyles = makeStyles(theme => ({
         container: {
-            display: 'flex',
-            justifyContent: 'space-around'
+            // display: 'flex',
+            // justifyContent: 'space-around'
         },
         // button: {
-        //     backgroundColor: 'green',
+            // backgroundColor: 'violet',
         // },
     }));
     const [anchorEl, setAnchorEl] = React.useState(null);
