@@ -91,7 +91,7 @@ export default function Projects() {
                     title={'Mars'}
                     subtitle={<span>by: Miguel</span>}
                     actionIcon={
-                        <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/mars'>GitHub Repo</Button>
+                        <Button className={classes.projectLinks} size='large' variant='contained' href='https://github.com/Guelito1/exploreMars'>GitHub Repo</Button>
                     }
                     />
                 </GridListTile>
